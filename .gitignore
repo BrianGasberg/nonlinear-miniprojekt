@@ -2,6 +2,7 @@
 *.m~
 *.mex*
 */slprj/
+*.orig
 
 main.pdf
 nonlinear-control_miniproject.pdf
