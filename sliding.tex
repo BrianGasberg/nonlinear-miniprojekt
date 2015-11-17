@@ -1,2 +1,21 @@
 \chapter{Sliding Phase}
-When the state of the system is finished with its reaching phase, the system enters the sliding phase. 
+When the state of the system is finished with its reaching phase, the system enters the sliding phase. The sliding phase are reached when the systems slides along the manifold heading towards the equilibrium point in origo. One way to do this is with a control law as:
+\begin{equation}
+  u = -\beta \left( \vect{x} \right)\up{sign}(s)
+\end{equation}
+Where:
+\begin{equation}
+  \beta (\vect{x}) \quad\text{is a control gain function}
+\nonumber
+\end{equation}
+And:
+\begin{equation}
+  \up{sign}(s) =
+  \begin{cases}
+    -1 & \quad s < 0 \\
+    0 & \quad s = 0 \\
+    1 & \quad s > 0
+  \end{cases}
+\nonumber
+\end{equation}
+This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we 
