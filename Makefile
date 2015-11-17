@@ -1,7 +1,7 @@
 TARGET	=  main
-NAME	=  nolinear-control_miniproject
+NAME	=  nonlinear-control_miniproject
 MODE	=  -interaction=batchmode --jobname=${NAME}
-GARBAGE =  *.aux *.bbl *.blg *.log *.lox *.toc *.out *.lof *.lot *.nav *.snm main.pdf *.acn *.acr *.alg *.glg *.glo *.gls *.ist *.backup *.dvi rapport.pdf *.tdo network-note.pdf
+GARBAGE =  *.aux *.bbl *.blg *.log *.lox *.toc *.out *.lof *.lot *.nav *.snm main.pdf *.acn *.acr *.alg *.glg *.glo *.gls *.ist *.backup *.dvi rapport.pdf *.tdo network-note.pdf nolinear-control_miniproject.pdf
 
 # Colour definitions
 CGREEN	=  "\033[1;92m"
@@ -13,7 +13,6 @@ CYELLOW =  "\033[1;33m"
 all: pdf clean
 
 pdf:
-	@rm -f nolinear-control_miniproject.pdf
 	@echo ${CGREEN} "Building miniproject" ${CNORMAL}
 	@echo ${CYELLOW} "make pdf" ${CNORMAL}
 	pdflatex ${MODE} ${TARGET}.tex
@@ -28,4 +27,4 @@ clean:
 	@echo ${CGREEN} "Done" ${CNORMAL}
 
 show:
-	xdg-open ${NAME}.pdf
+	xdg-open ${NAME}.pdf &
