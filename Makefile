@@ -27,4 +27,4 @@ clean:
 	@echo ${CGREEN} "Done" ${CNORMAL}
 
 show:
-	xdg-open ${NAME}.pdf
+	xdg-open ${NAME}.pdf &
