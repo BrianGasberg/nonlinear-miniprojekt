@@ -1,5 +1,5 @@
 TARGET	=  main
-NAME	=  nolinear-control_miniproject
+NAME	=  nonlinear-control_miniproject
 MODE	=  -interaction=batchmode --jobname=${NAME}
 GARBAGE =  *.aux *.bbl *.blg *.log *.lox *.toc *.out *.lof *.lot *.nav *.snm main.pdf *.acn *.acr *.alg *.glg *.glo *.gls *.ist *.backup *.dvi rapport.pdf *.tdo network-note.pdf
 
@@ -13,7 +13,6 @@ CYELLOW =  "\033[1;33m"
 all: pdf clean
 
 pdf:
-	@rm -f nolinear-control_miniproject.pdf
 	@echo ${CGREEN} "Building miniproject" ${CNORMAL}
 	@echo ${CYELLOW} "make pdf" ${CNORMAL}
 	pdflatex ${MODE} ${TARGET}.tex
