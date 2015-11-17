@@ -3,6 +3,8 @@
 *.mex*
 */slprj/
 
+main.pdf
+
 */auto/*
 *.el
 
