@@ -1,0 +1,31 @@
+\newcommand{\degree}{\ensuremath{^\circ}}
+\newcommand{\g}{\ensuremath{\cdot}}
+\newcommand{\sq}{\ensuremath{^2}}
+\newcommand{\ohm}{\ensuremath{\mathrm{\Omega}}}
+\newcommand{\matt}[1]{\ensuremath{\mathbf{\underline{{#1}}}}}
+\newcommand{\vect}[1]{\ensuremath{\bm{\bar{#1}}}}
+\newcommand{\quat}[1]{\ensuremath{\bm{\mathrm{#1}}}}
+\newcommand{\txtpm}{\ensuremath{\pm}}
+\newcommand{\up}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\pre}[3]{\ensuremath{\prescript{#1}{#2}{#3}}}
+\newcommand{\euler}{\ensuremath{\mathsf{e}}}
+\newcommand{\transp}{\ensuremath{^\top}}
+\newcommand{\inv}{\ensuremath{^{-1}}}
+\newcommand{\walloftext}{
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{wall_of_text_alert.jpg}
+  \end{center}
+}
+\newcommand{\gtodo}[1]{\todo[color=green!80]{#1}}
+\newcommand{\rtodo}[1]{\todo[color=red!80]{\textbf{#1}}}
+\newcommand{\itodo}[1]{\todo[inline]{#1}}
+\newcommand{\eval}[2]{\left. #1\right\vert_{#2}}
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\fig}[4]{
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{#3}
+    \label{fig:#4}
+  \end{figure}
+}

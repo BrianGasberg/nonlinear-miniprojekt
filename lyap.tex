@@ -1,0 +1,74 @@
+\chapter{Kontroller design}
+\begin{equation}
+	\begin{split}
+	\dot{x}_{1}&=x_{2} \\
+	\dot{x}_{2}&=-\frac{g}{l} \g sin(x_1 \g \pi) - \frac{K_f}{m} \g x_2 + \frac{T}{l^2 \g m} + \delta (t)
+	\end{split}
+\end{equation}
+Hvor $g$ er tyngde accelerationen, $l$ er længden på armen, $k_f$ er friktions konstanten i lejet, $m$ er massen af loddet og $T$ er drejnings momentet fra motoren.
+
+En lyapnov funktion kan nu stilles op, den klassiske vælges for begge variable.
+\begin{equation}
+	V = \frac{1}{2} \g {x_{1}}^{2} + \frac{1}{2} \g {x_{2}}^{2}
+\end{equation}
+
+De konstante led i systemet substitueres for overblik:
+\begin{equation}
+	a = \frac{g}{l}, \qquad b = \frac{k_f}{m}, \qquad c=\frac{1}{l^2 \g m}
+\end{equation}
+
+\begin{equation}
+	s = a \g x_1 + x_2
+\end{equation}
+
+Forstyrrelsen fra den bevægende platform skal udkompenseres for at få en god kontroller.
+
+
+En kontroller af $T$ kan nu blive designet, den designes til at fjerne dynamik, og indføre stabilitet
+\begin{equation}
+	U(x) = \frac{-k_2 \g x_2}{c} - k_1 \g \frac{1}{c} \g x_1 + \frac{a}{c} \g sin(x_1 \g \pi)
+\end{equation}
+$k_1$ og $k_2$ skal vælges sådan at systemet er stabilt; $(A-BK)$ skal være negativ definit
+\begin{equation}
+	\begin{bmatrix}
+	0 & 1 \\
+	-k_1 & -b - k_2
+	\end{bmatrix}
+\end{equation}
+Ved at udlede anden ordens ligningen, og dens rødder bliver det fundet at $k_1 = 50$ og $k_2 = -b +15$ er gode valg.
+
+\textbf{Lyaponov redesign}
+
+Forstyrrelserne kan nu beskrives som:
+\begin{equation}
+	\begin{split}
+	\delta_c (t) &= (\frac{\hat{a}-a}{\hat{c}})\g sin(x_1) + (\frac{\hat{b}-b}{\hat{c}}) \g x_2 + (\frac{\hat{c}-c}{\hat{c}}) \g U(T) + (\frac{\zeta}{\hat{c}}) \g cos(x_1) \\
+	\delta_c (t) &\leq \left \Vert 0.0934 \g \frac{5}{2000} \g 500 \g sin(t) + 1.25 x_2 + 0.0501 x_1 + 32.16	\right\Vert \\
+	\delta_c (t) &\leq 0.12 + 1.25 x_2 + 0.0501 x_1 + 1.53sin(x_1) + 0.05 V \\
+	\end{split}
+\end{equation}
+
+Pertubering af C giver en ændring af kontrol signalet svarende til: 
+\begin{equation}
+	k_0 \g \vert V \vert = \frac{\hat{c} - c}{c} \g \vert V \vert
+\end{equation}
+
+\begin{equation}
+	\omega = \frac{\partial V}{\partial x} \g G = x_1 \g G_1 + x_2 \g G_2 = x_2 \g C
+\end{equation}
+
+\begin{equation}
+	\eta(\omega) = 
+\end{equation}
+
+\begin{equation} \label{eq:obstacle_avoidance}
+  V = \left\{
+  \begin{array}{l l}
+    \frac{\eta}{1-k_0} \g sign(\omega) &  \text{for} \quad \eta(\omega)	\geq \epsilon \\
+    -\frac{\eta ^2}{1-k_0} \g \frac{\omega}{\epsilon} & \text{for} \quad \eta(\omega) < \epsilon
+  \end{array} \right.
+\end{equation}
+
+\begin{equation}
+	\Omega_{\epsilon} = \left \{ \vert x_1 \vert \leq \frac{\epsilon}{a_1 \g \Theta_1}, \vert s \vert \leq \epsilon \right \}
+\end{equation}

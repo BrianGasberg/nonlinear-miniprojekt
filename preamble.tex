@@ -1,0 +1,61 @@
+\documentclass[10pt,a4paper,oneside,openany,article]{memoir}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,mathtools,bm} % Diverse matematik
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\graphicspath{{../../figures/}}
+\usepackage{pdfpages}
+\usepackage{epstopdf}
+\usepackage{fullpage}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{color,xcolor}
+\usepackage{listings} % Præsentering af kode
+\usepackage{pgfplots}
+\usepackage{tikzpagenodes}
+\usepackage{tkz-euclide}
+\usepackage[acronym,toc,nonumberlist]{glossaries}
+\usepackage{hyperref}
+\usepackage{memhfixc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,patterns,decorations.pathreplacing, decorations.pathmorphing,decorations.markings,shadows,shapes.misc,calc, positioning}
+\captionsetup{font=footnotesize,labelfont={bf},textfont=normalfont}
+
+\setlength{\parindent}{1.5mm} % Størrelse af indryk ved nyt afsnit
+\setlength{\parskip}{1.8mm} % Afstand mellem afsnit ved brug af "double Enter"
+
+\newlength\figureheight 
+\newlength\figurewidth 
+
+% Farver til listset
+\definecolor{dkgreen}{rgb}{0,0.6,0} % Definerer farven grøn til brug i præsentation af kildekode
+\definecolor{gray}{rgb}{0.5,0.5,0.5} % Definerer farven grå til brug i præsentation af kildekode
+\definecolor{mauve}{rgb}{0.58,0,0.82} % Definerer farven pink til brug i præsentation af kildekode
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+
+% Listset til præsentation af kildekode
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily}, % basicstyle={\small\ttfamily},
+  stepnumber=2,
+  firstnumber=1,
+  escapeinside={@}{@},
+  numberfirstline=false,
+  numbers=left,
+  numbersep=8pt,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3,
+  captionpos=b,
+  keepspaces=true
+}
