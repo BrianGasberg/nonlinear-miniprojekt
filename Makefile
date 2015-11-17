@@ -1,7 +1,7 @@
 TARGET	=  main
 NAME	=  nonlinear-control_miniproject
 MODE	=  -interaction=batchmode --jobname=${NAME}
-GARBAGE =  *.aux *.bbl *.blg *.log *.lox *.toc *.out *.lof *.lot *.nav *.snm main.pdf *.acn *.acr *.alg *.glg *.glo *.gls *.ist *.backup *.dvi rapport.pdf *.tdo network-note.pdf
+GARBAGE =  *.aux *.bbl *.blg *.log *.lox *.toc *.out *.lof *.lot *.nav *.snm main.pdf *.acn *.acr *.alg *.glg *.glo *.gls *.ist *.backup *.dvi rapport.pdf *.tdo network-note.pdf nolinear-control_miniproject.pdf
 
 # Colour definitions
 CGREEN	=  "\033[1;92m"
