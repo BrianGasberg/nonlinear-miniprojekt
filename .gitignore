@@ -3,14 +3,15 @@
 *.mex*
 */slprj/
 
+main.pdf
+nonlinear-control_miniproject.pdf
+
 */auto/*
 *.el
 
 *.Orig
 *.backup
 *.*~
-
-nolinear-control_miniproject.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
