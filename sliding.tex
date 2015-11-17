@@ -13,9 +13,12 @@ And:
   \up{sign}(s) =
   \begin{cases}
     -1 & \quad s < 0 \\
-    0 & \quad s = 0 \\
-    1 & \quad s > 0
+     0 & \quad s = 0 \\
+     1 & \quad s > 0
   \end{cases}
 \nonumber
 \end{equation}
-This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we 
+This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we define a value, $\epsilon$. $\epsilon$ is used to define a region close to the sliding surface where when within, the sign$()$ function is replaced with an approximation of a discontinous function - a saturation function.
+% \begin{equation}
+  
+% \end{equation}
