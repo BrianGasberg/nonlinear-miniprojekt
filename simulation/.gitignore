@@ -2,3 +2,4 @@
 *.m~
 *.mex*
 */slprj/
+*.slx.autosave
