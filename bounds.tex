@@ -1,0 +1,29 @@
+\section{Bound} % (fold)
+\label{sec:bound}
+It can be shown that the reaching and sliding surfaces within a given bound will guarantee convergence. The bound can be found by looking at the system and its Lyapunov function.
+
+Define $\rho$ such that:
+\begin{equation}
+        \left \vert \frac{a_1 x_2 + h(x)}{g(x)} \right \vert \leq \rho(x) 
+\end{equation}
+
+And choose a lyapunov function candidate:
+\begin{equation}
+        V=(1/2)s^2
+\end{equation}
+for:
+\begin{equation}
+        s=a_1 x_1+ x_2 = 0
+\end{equation}
+The derived of the Lyapunov function is found by:
+\begin{equation}
+        \begin{split}
+                \dot{s} &= a_1 \g \dot{x}_1 + \dot{x}_2 \\
+                \dot{s} &= a_1 \g x_2 + h(x) + g(x) \g u\\
+                \dot{V} &= s \g \dot{s} = 
+        \end{split}
+\end{equation}
+        
+
+
+% section bound (end)
