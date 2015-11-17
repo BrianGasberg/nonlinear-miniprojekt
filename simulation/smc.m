@@ -24,9 +24,9 @@ b_p = [Kf_p(1)/m_p(1) Kf_p(2)/m_p(1) Kf_p(2)/m_p(2) Kf_p(1)/m_p(2)];
 
 b_hat = mean(b_p);
 
-m = min(m_p);
-Kf = max(Kf_p);
-alpha = max(alpha_p);
+m = mean(m_p);
+Kf = mean(Kf_p);
+alpha = mean(alpha_p);
 
 rho1 = [abs(-a/max(c_p) - a/c_hat) abs((a1-max(b_p))/min(c_p) - (a1-b_hat)/c_hat)]
 rho2 = (Km*A*(5/2000)/(min(m_p)*l))/min(c_p)
@@ -37,9 +37,10 @@ theta = 0.9;
 scale = 1;
 
 e = x1_bound/(1-1/(a1*theta))*scale
+e = 0.5
 
 omega_e = [e/(a1*theta) (1 + 1/(a1*theta))*e];
-% omega_e = [x1_bound x2_bound]; 
+omega_e = [x1_bound x2_bound]; 
 
 Rho_wo_dis = rho1(1)*omega_e(1);
 beta_0_wo_dis = ceil(Rho_wo_dis) - Rho_wo_dis
