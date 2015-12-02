@@ -1,38 +1,83 @@
 \section{Bound} % (fold)
 \label{sec:bound}
-It can be shown that the reaching and sliding surfaces within a given bound will guarantee convergence. The bound can be found by looking at the system and its Lyapunov function.
+The bounds of the sliding mode describe the area in which the controller uses the sign function or the P-function as controller.
 
-
-
-Define $\rho$ such that:
+Finding the boundary
 \begin{equation}
-        \left \vert \frac{a_1 x_2 + h(x)}{g(x)} \right \vert \leq \rho(x) 
+\begin{split}
+        s &= a_1 \g x_1 + x_2 \\
+        \dot{s} &= a_1 \g x_2 - a \g sin(x_1) - b \g x_2 + c \g u = a_1 \g x_2 + h(x) + g(x) \g u
+\end{split}
+\end{equation}
+A Lyaponov function has to be chosen, we try with the standard:
+\begin{equation}
+        V(x) = 1/2 s^2 \rightarrow \dot{x}_1 = -a_1 \g x_1 + s
+\end{equation}
+With the system and the Lyaponov function defined we can now start to find our bound. The bound we are looking for is called $\epsilon$ and the area within the boundary is therefore defined as:
+\begin{equation}
+        \vert s \vert \leq \epsilon
 \end{equation}
 
-And choose a lyapunov function candidate:
-\begin{equation}
-        V=(1/2)s^2
-\end{equation}
-for:
-\begin{equation}
-        s=a_1 x_1+ x_2 = 0
-\end{equation}
-The derived of the Lyapunov function is found by:
 \begin{equation}
         \begin{split}
-                \dot{s} &= a_1 \g \dot{x}_1 + \dot{x}_2 \\
-                \dot{s} &= a_1 \g x_2 + h(x) + g(x) \g u\\
-                \dot{V} &= s \g \dot{s} = s(a_1 \g x_2+ h(x)) + g(x) \g s \g u \leq g(x) \g \vert s \vert \g \rho(x) + g(x) \g s\g u
+                \dot{V}(x) &= x_1 \g \dot{x}_1 \leq 0 \\
+                &= -a_1 \g x_1^2 + x_1 \g s \leq -a_1 \g x_1^2 + |x_1| \g \epsilon \leq -(1-\Theta) \g x_1^2 \quad \forall |x_1| \geq \frac{\epsilon}{a_1 \g \Theta}
         \end{split}
 \end{equation}
+
+\begin{equation}
+        \Omega = \{ |x_1| \leq \frac{\epsilon}{-a_1 \g \Theta} \quad , \quad |x_1 + x_2| \leq \epsilon \}
+\end{equation}
+
+\begin{equation}
+        |x_2| = |x_1 + x_2 - x_1| \leq |x_1 + x_2| - |x_1| \leq (1 - \frac{1}{a_1 \g \Theta}) \g \epsilon
+\end{equation}
+
+\begin{equation}
+        \Theta = 0.9 \quad a_1 = 8
+\end{equation}
+
+\begin{equation}
+        \begin{split}
+                (1-\frac{1}{a_1 \g \Theta}) \g \epsilon \leq 0.01 \\
+                \epsilon < \frac{0.01 \g a_1 \g \Theta}{a_1 \g \Theta - 1} \\
+                \epsilon < 0.0116
+        \end{split}
+\end{equation}
+
+% It can be shown that the reaching and sliding surfaces within a given bound will guarantee convergence. The bound can be found by looking at the system and its Lyapunov function.
+
+
+
+% Define $\rho$ such that:
+% \begin{equation}
+%         \left \vert \frac{a_1 x_2 + h(x)}{g(x)} \right \vert \leq \rho(x) 
+% \end{equation}
+
+% And choose a lyapunov function candidate:
+% \begin{equation}
+%         V=(1/2)s^2
+% \end{equation}
+% for:
+% \begin{equation}
+%         s=a_1 x_1+ x_2 = 0
+% \end{equation}
+% The derived of the Lyapunov function is found by:
+% \begin{equation}
+%         \begin{split}
+%                 \dot{s} &= a_1 \g \dot{x}_1 + \dot{x}_2 \\
+%                 \dot{s} &= a_1 \g x_2 + h(x) + g(x) \g u\\
+%                 \dot{V} &= s \g \dot{s} = s(a_1 \g x_2+ h(x)) + g(x) \g s \g u \leq g(x) \g \vert s \vert \g \rho(x) + g(x) \g s\g u
+%         \end{split}
+% \end{equation}
         
 
-The upper bound of $\epsilon$ is found via:
-\begin{equation}
-        \begin{split}
-                \frac{(m \g l \g g_0)}{a_1} &\leq \frac{k}{\epsilon} \\
-                \epsilon &\leq \frac{k \g a_1}{m \g l \g g_0}    
-        \end{split}
-\end{equation}
+% The upper bound of $\epsilon$ is found via:
+% \begin{equation}
+%         \begin{split}
+%                 \frac{(m \g l \g g_0)}{a_1} &\leq \frac{k}{\epsilon} \\
+%                 \epsilon &\leq \frac{k \g a_1}{m \g l \g g_0}    
+%         \end{split}
+% \end{equation}
 
 % section bound (end)
