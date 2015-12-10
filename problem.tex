@@ -1,17 +1,17 @@
 \chapter{Problem}
-Et pendul skal styres til at stå lodret på en bevægende platform.
+A pendulum is to be controlled into a vertical orientation on a moving platform.
 \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.95\textwidth]{pendul.png}
-        \caption{Pendul på sin ``slæde''}
-        \label{fig:label}
+        \caption{Pendulum on its moving platform}
+        \label{fig:problem}
 \end{figure}
-Modellen for dette system er:
+The model for this system is:
 \begin{equation}
         m\g l \g \Ddot{\theta} + m \g g \g sin(\theta) + k_f \g l \ \dot{\theta} = \frac{T}{l} + \delta_c(t)
 \end{equation}
 
-Konstanterne i dette system er dog ikke sikre, og de kan derfor antageforskellige værdier:
+The constants of the system is not precisely known, and can therefore at best be described as:
 \begin{equation}
         \begin{split}
                 0.095 \leq &m \leq 0.105 \\
@@ -21,11 +21,11 @@ Konstanterne i dette system er dog ikke sikre, og de kan derfor antageforskellig
         \end{split}
 \end{equation}
 
-Forstyrelsen i form af slædens bevægelse kan estimeres til:
+The disturbances from the moving platform is roughly:
 \begin{equation}
         \delta_c(t) = 0.0934 \g 5/2000 \g sin(t)
 \end{equation}
 
-Målsætningen er at lave en ``Sliding mode'' kontroller som kan få pendulet til at stå lodret $(\theta, \dot{\theta})= \pi, 0$. Fejlen på $\theta$ må maksimum være op til 0.1 radianer til en af siderne, og rotations hastigheden af pendulet ($\dot{\theta}$) må maks være 0.01
+The goal is to make a sliding mode controller which can hold the pendulum in a vertical orientation, and the speed of the pendulum to be zero; $(\theta, \dot{\theta})= \pi, 0$. The error of the orientation ($\theta$) can at maximum be 0.1 radians to wither side, and the rotation speed ($\dot{\theta}$) can at maximum be 0.01 radians per second.
 
-Den fundne kontroller skal først tested i suimulering, og skal derefter testes på en rigtig platform.
+The controller shall be tested both through simulation and through testing on a real platform.
