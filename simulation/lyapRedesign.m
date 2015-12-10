@@ -1,61 +1,64 @@
-clc
-close all
-clear all
 
+l = 0.305;
 g = -9.81;
-l_min = 0.9;
-m_min = 0.5;
-k_min = 0.2;
+Km = 0.0934;
+A = 500;
+
+dt = 1/200;
+
+a = g/l;
+
+m_p = [0.095 0.105];
+alpha_p = [2/2000 5/2000];
+
+c_p = [Km*alpha_p(2)/(m_p(1)*l^2) Km*alpha_p(1)/(m_p(2)*l^2)];
+c_hat = mean(c_p);
+
+Kf_p = [0.4 0.6];
+
+b_p = [Kf_p(1)/m_p(1) Kf_p(2)/m_p(1) Kf_p(2)/m_p(2) Kf_p(1)/m_p(2)];
+
+b_hat = mean(b_p);
+
+m = mean(m_p);
+Kf = mean(Kf_p);
+alpha = mean(alpha_p);
 
 
-k_hat = 0.1;
-l_hat = 1;
-m_hat = 0.66;
+k0_lyap = abs((max(c_p) - c_hat)/c_hat)
 
-b_hat = k_hat/m_hat;
-a_hat = g/l_hat;
-c_hat = 1/(m_hat*l_hat^2);
-
-a = g/l_min;
-b = k_min/m_min;
-c = 1/(m_min*l_min^2);
-
-k = 0;
-l = 0.9;
-m = 1.5;
-
-k0 = abs((2.4691 - c_hat)/c_hat);
-
-theta = 0.9;
-% k1 = 1;
-% k2 = 2 - b_hat;
+theta_lyap = 0.94;
 
 % Assign eigenvalues
-k1 = 40;
-k2 = 40 - b_hat;
+k1 = 100;
+k2 = 20 - b_hat;
 
-A0 = [0 1;
+A0 = [0     1;
       -k1 -(k2 + b_hat)];
   
-eig(A0)
+lampda_A0 = eig(A0)
 
 % The Lyapunov functions
 P = [3/2 1/2;
     1/2 1/2];
 
-% The pertubation magnitude
-rho1 = 1/c_hat * (abs((a_hat*c - a*c_hat)/c_hat) + abs((c*b_hat - c_hat*b)/c_hat) + k0*sqrt(5));
-rho2 = m_hat;
+% A0'*P + P*A0
 
-rho = rho1 + rho2
+% The pertubation magnitude
+% rho1 = 1/c_hat * (abs((a_hat*c - a*c_hat)/c_hat) + abs((c*b_hat - c_hat*b)/c_hat) + k0*sqrt(5));
+% rho2 = m_hat;
+
+rho1_lyap = norm((min(c_p) - c_hat)/c_hat^2 *(a - k1)) + norm((b_hat - min(b_p))/c_hat - ((min(c_p) - c_hat)/c_hat^2) * k2)
+rho2_lyap = norm(1/c_hat * (Km*A*alpha_p(2))/(min(m_p)*l))
 
 lambda_min = min(eig(P))
 lambda_max = max(eig(P))
 
 % The ultimate boundness
-b = sqrt(lambda_max/lambda_min)*sqrt(1/(theta*4))
+b_lyap = 1/2 *sqrt(lambda_max/lambda_min)*sqrt(1/(theta_lyap))
 
-xLimit = 0.01;
+xLimit = norm([0.1 0.01]);
 
 % epsilon
-e = (xLimit/b)^2
+e_lyap = (xLimit/b_lyap)^2
+e_lyap = 0.15

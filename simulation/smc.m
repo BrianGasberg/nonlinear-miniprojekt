@@ -32,15 +32,14 @@ rho1 = [abs(-a/max(c_p) - a/c_hat) abs((a1-max(b_p))/min(c_p) - (a1-b_hat)/c_hat
 rho2 = (Km*A*(5/2000)/(min(m_p)*l))/min(c_p)
 
 x2_bound = 0.01;
-x1_bound = 0.1;
-theta = 0.9;
+theta = 0.94;
 scale = 1;
 
-e = x1_bound/(1-1/(a1*theta))*scale
-e = 0.5
+e = (x2_bound)/norm(1-1/theta)
 
-omega_e = [e/(a1*theta) (1 + 1/(a1*theta))*e];
-omega_e = [x1_bound x2_bound]; 
+% omega_e = [e/(a1*theta) (1 + 1/(a1*theta))*e];
+% omega_e = [x1_bound x2_bound];
+omega_e = [norm(e/(a1*theta)) norm((1 - 1/theta)*e)];
 
 Rho_wo_dis = rho1(1)*omega_e(1);
 beta_0_wo_dis = ceil(Rho_wo_dis) - Rho_wo_dis
