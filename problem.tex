@@ -12,11 +12,16 @@ The model for this system is:
 \end{equation}
 
 \begin{equation}
-        a=\frac{g}{l}, \qquad b=\frac{k_\up{f}}{m}, \qquad c= \frac{k_\up{m}\alpha}{m l^2}, \qquad \zeta(t) = \frac{k_\up{m}}{m l} \delta_\up{c}(t)
+        a=\frac{g}{l}, \qquad b=\frac{k_\up{f}}{m}, \qquad c= \frac{k_\up{m}\alpha}{m l^2}, \qquad \delta_\up{c}(t) = k_\up{m} \frac{A\g5}{2000}\sin(t)
 \end{equation}
 
 \begin{equation}
-        \dot{x}_2 = - a \sin x_1 - b x_2 + c u(t) + \zeta(t)
+        \dot{x}_2 = - a \sin x_1 - b x_2 + c u(t) + \xi(t)
+\end{equation}
+
+where
+\begin{equation}
+        \xi(t) = \frac{1}{m l} \delta_\up{c}(t)
 \end{equation}
 
 The system parameters has uncertainties and they are given in the range as follows:
@@ -27,12 +32,13 @@ The system parameters has uncertainties and they are given in the range as follo
                 2/2000 \leq &\alpha \leq 5/2000 \\
                 &l = 0.305 \\
                 &g = -9.81 \\
+                &k_\up{m} = 0.0934 \\
         \end{split}
 \end{equation}
 
 The disturbances from the moving platform is roughly:
 \begin{equation}
-        \delta_c(t) = 0.0934 \g 5/2000 \g sin(t)
+        \delta_c(t) = k_\up{m} \g 5/2000 \g \sin(t)
 \end{equation}
 
 The goal is to make a sliding mode controller which can hold the pendulum in a vertical orientation, and the speed of the pendulum to be zero; $(\theta, \dot{\theta})= \pi, 0$. The error of the orientation ($\theta$) can at maximum be 0.1 radians to wither side, and the rotation speed ($\dot{\theta}$) can at maximum be 0.01 radians per second.
