@@ -1,23 +1,6 @@
 \section{Bound} % (fold)
 \label{sec:bound}
-The bounds of the sliding mode describe the area in which the controller uses the sign function or the gain as controller.
 
-Finding the boundary
-\begin{equation}
-  \begin{split}
-    s &= a_1 x_1 + x_2 \\
-    \dot{s} &= a_1 x_2 - a \sin x_1 - b x_2 + c u = a_1 x_2 + h(x) + g(x) u
-  \end{split}
-\end{equation}
-A Lyaponov function has to be chosen, we try with the standard:
-\begin{equation}
-  V(x) = \frac{1}{2} x_1^2 \rightarrow \dot{x}_1 = -a_1 x_1 + s
-\end{equation}
-With the system and the Lyaponov function defined we can now start to find our bound. The bound is defined by $\epsilon$ which is gain and the area within the boundary is therefore defined by:
-\begin{equation}
-  \vert s \vert \leq \epsilon
-\end{equation}
-The derivative of the Lyaponov function should be negative within the bound:
 \begin{equation}
         \begin{split}
                 \dot{V}_1(x) &= x_1 \dot{x}_1 = -a_1 x_1^2 + x_1 s \leq -a_1 x_1^2 + |x_1| \epsilon \\
