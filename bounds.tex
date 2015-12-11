@@ -22,26 +22,26 @@ The derivative of the Lyaponov function should be negative within the bound:
         \begin{split}
                 \dot{V}(x) &= x_1 \g \dot{x}_1 \leq 0 \\
                 &= -a_1 \g x_1^2 + x_1 \g s \leq -a_1 \g x_1^2 + |x_1| \g \epsilon \\
-                 -a_1 \g (1-\Theta) \g x_1^2 \quad +\vert x_1 \vert \g \epsilon = 0 \quad\forall |x_1| \geq \frac{\epsilon}{a_1 \g \Theta}
+                 -a_1 \g (1-\theta) \g x_1^2 \quad +\vert x_1 \vert \g \epsilon = 0 \quad\forall |x_1| \geq \frac{\epsilon}{a_1 \g \theta}
         \end{split}
 \end{equation}
 The bound is then defined as:
 \begin{equation}
-        \Omega = \{ |x_1| \leq \frac{\epsilon}{-a_1 \g \Theta} \quad , \quad |x_1 + x_2| \leq \epsilon \}
+        \Omega = \{ |x_1| \leq \frac{\epsilon}{-a_1 \g \theta} \quad , \quad |x_1 + x_2| \leq \epsilon \}
 \end{equation}
 
 \begin{equation}
-        |x_2| = |x_1 + x_2 - x_1| \leq |x_1 + x_2| - |x_1| \leq (1 - \frac{1}{a_1 \g \Theta}) \g \epsilon
+        |x_2| = |x_1 + x_2 - x_1| \leq |x_1 + x_2| - |x_1| \leq (1 - \frac{1}{a_1 \g \theta}) \g \epsilon
 \end{equation}
-$\Theta$ is used for testing the stability of the Lyaponov function, and should be sent as $0 \leq \Theta \leq 1$. $a_1$ is found through simulation, and determines the slope of the sliding surface. The slope must be positive.
+$\theta$ is used for testing the stability of the Lyaponov function, and should be sent as $0 \leq \theta \leq 1$. $a_1$ is found through simulation, and determines the slope of the sliding surface. The slope must be positive.
 \begin{equation}
-        \Theta = 0.9 \quad a_1 = 8
+        \theta = 0.9 \quad a_1 = 8
 \end{equation}
 
 \begin{equation}
         \begin{split}
-                (1-\frac{1}{a_1 \g \Theta}) \g \epsilon \leq 0.01 \\
-                \epsilon < \frac{0.01 \g a_1 \g \Theta}{a_1 \g \Theta - 1} \\
+                (1-\frac{1}{a_1 \g \theta}) \g \epsilon \leq 0.01 \\
+                \epsilon < \frac{0.01 \g a_1 \g \theta}{a_1 \g \theta - 1} \\
                 \epsilon < 0.0116
         \end{split}
 \end{equation}
