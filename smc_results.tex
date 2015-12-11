@@ -1,39 +1,46 @@
 \chapter{Sliding Mode Results} % (fold)
 \label{cha:sliding_mode}
-\begin{figure}[htbp]
+\begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{smc.pdf}
-        \caption{caption}
-        \label{fig:label}
+        \includegraphics[width=0.9\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{smc.pdf}
+        \caption{Shows the response of the Sliding Mode Controller.}
+        \label{fig:smc}
 \end{figure}
 % chapter sliding_mode (end)
 
 \chapter{Lyapunov Redesign Results} % (fold)
 \label{cha:lyapunov_redesign_results}
-\begin{figure}[htbp]
+\begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{lyap.pdf}
-        \caption{caption}
-        \label{fig:label}
+        \includegraphics[width=0.9\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{lyap.pdf}
+        \caption{Shows the response of the Lyapunov Redesign controller.}
+        \label{fig:lyap}
 \end{figure}
 
 % chapter lyapunov_redesign_results (end)
 
-\chapter{Extreme Disturbances} % (fold)
+\chapter{Increased Unmodelled Uncertainty} % (fold)
 \label{cha:extreme_dis}
-\begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.8\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{smc_extreme_dis.pdf}
-        \caption{caption}
-        \label{fig:label}
-\end{figure}
+\section{Sliding Mode Controller} % (fold)
+\label{sec:sliding_mode_controller}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{lyap_extreme_dis.pdf}
-        \caption{caption}
-        \label{fig:label}
+        \includegraphics[width=0.9\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{smc_extreme_dis.pdf}
+        \caption{Shows the response of the Sliding Mode Control exited by 10 times the amplitude of the estimated disturbance.}
+        \label{fig:smc_extreme}
 \end{figure}
+% section sliding_mode_controller (end)
+
+\section{Lyapunov Redesign Controller} % (fold)
+\label{sec:lyapunov_redesign_controller}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth,trim=0.5cm 5cm 0.5cm 4cm, clip]{lyap_extreme_dis.pdf}
+        \caption{Shows the response of the Lyapunov Redesign controller exited by 10 times the amplitude of the estimated disturbance.}
+        \label{fig:lyap_extreme}
+\end{figure}
+% section lyapunov_redesign_controller (end)
 
 
 % chapter extreme_ (end)
