@@ -10,6 +10,10 @@ The model for this system is:
 \begin{equation}
         m\g l \g \Ddot{\theta} + m \g g \g sin(\theta) + k_f \g l \ \dot{\theta} = \frac{T}{l} + \delta_c(t)
 \end{equation}
+To simplify extrapolations later on the system model is simplified by:
+\begin{equation}
+        A=\frac{g}{l}, \qquad B=\frac{k_f}{m}, \qquad C= \frac{k_m}{m \g l^2}; \qquad \dot{x_2} = A \g sin(x_1) + B \g x_2 + C \g U + \delta_c(t)
+\end{equation}
 
 The constants of the system is not precisely known, and can therefore at best be described as:
 \begin{equation}
