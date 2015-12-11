@@ -2,20 +2,20 @@
 
 The purpose of the reaching phase is to get to the manifold of the surface $s $ where:
 \begin{equation}
-s = a_1 \cdot x_1 + x_2 = 0;
+s = a_1 x_1 + x_2 = 0
 \end{equation}
-On the manifold the control loop becomes $ \dot{x}_1 = - a_1 *x_1   $ which is stable for $ a_1< 0$;
+On the manifold the control loop becomes $ \dot{x}_1 = - a_1 x_1   $ which is stable for $ a_1< 0$
 By differentiating and using $ \dot{x}_1 = x_2 $ it becomes:
 \begin{equation}
-\dot{s} = a_1 \cdot x_2 - a \g sin(x_1 + \pi) - b \g x_2 + c \g T + \delta (t);
+\dot{s} = a_1 x_2 - a sin(x_1 + \pi) - b x_2 + c T + \delta (t)
 \end{equation}
 %For now it will be written as: 
 %\begin{equation}
 %\dot{s} = a_1 \cdot x_2 + h(x) + g(x)\g u;
 %\end{equation}
-With the lyapunov function $V = 1/2 s^2 $ for $ s $ the system is stable for:
+With the lyapunov function $V = \frac{1}{2} s^2 $ for $ s $ the system is stable for:
 \begin{equation}
- 0 > \dot{V} = s\g \dot{s} =  s \g (a_1 \cdot x_2 - a \g sin(x_1 + \pi) - b \g x_2  + \delta (t) ) + s \g c \g T;
+ \dot{V} = s \dot{s} =  s (a_1 x_2 - a sin(x_1 + \pi) - b x_2  + \delta (t) ) + s c T
 \end{equation}
 Which holds for
 \begin{equation}
