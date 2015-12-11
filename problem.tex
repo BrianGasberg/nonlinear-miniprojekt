@@ -2,7 +2,7 @@
 A pendulum is to be controlled into a vertical orientation on a moving platform.
 \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.95\textwidth]{pendul.png}
+        \includegraphics[width=0.6\textwidth,trim=3cm 0cm 3cm 0cm, clip]{pendul.png}
         \caption{Pendulum on its moving platform}
         \label{fig:problem}
 \end{figure}
@@ -27,12 +27,13 @@ where
 The system parameters has uncertainties and they are given in the range as follows:
 \begin{equation}
         \begin{split}
-                0.095 \leq &m \leq 0.105 \\
-                0.4 \leq &k_f \leq 0.6 \\
-                2/2000 \leq &\alpha \leq 5/2000 \\
-                &l = 0.305 \\
-                &g = -9.81 \\
-                &k_\up{m} = 0.0934 \\
+                l &= 0.305 \\
+                g &= -9.81 \\
+                k_\up{m} &= 0.0934 \\
+                0.095 \leq & m \leq 0.105 \\
+                0.4 \leq & k_f \leq 0.6 \\
+                2/2000 \leq & \alpha \leq 5/2000 \\
+                \nonumber
         \end{split}
 \end{equation}
 
@@ -41,6 +42,6 @@ The disturbances from the moving platform is roughly:
         \delta_c(t) = k_\up{m} \g 5/2000 \g \sin(t)
 \end{equation}
 
-The goal is to make a sliding mode controller which can hold the pendulum in a vertical orientation, and the speed of the pendulum to be zero; $(\theta, \dot{\theta})= \pi, 0$. The error of the orientation ($\theta$) can at maximum be 0.1 radians to wither side, and the rotation speed ($\dot{\theta}$) can at maximum be 0.01 radians per second.
+The goal is to make a sliding mode controller which can hold the pendulum in a vertical orientation and stabilize it at $(\pi,0)$ with tolerances $|\theta| \leq 0.1$ and $|\dot{\theta}| \leq 0.01$
 
 The controller shall be tested both through simulation and through testing on a real platform.

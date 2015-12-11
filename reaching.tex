@@ -28,15 +28,15 @@ By differentiating and using $ \dot{x}_1 = x_2 $ it becomes:
 % \end{equation}
 With the lyapunov function $V = \frac{1}{2} s^2 $ for $ s $ the system is stable for:
 \begin{equation}
-  \dot{V} = s \dot{s} =  s (a_1 x_2 - a sin(x_1 + \pi) - b x_2  + \delta (t) ) + s c T
+  \dot{V} = s \dot{s} =  s (a_1 x_2 - a sin(x_1 + \pi) - b x_2  + \delta (t) ) + s c u(t)
 \end{equation}
 Which holds for
 \begin{equation}
-  T = u = -\beta (x) \g sign(x)
+  u(t) = -\beta (x) \up{sgn}(s)
 \end{equation}
 where
 \begin{equation}
-  \beta (x) \geq \left| \frac{a_1 \cdot x_2 - a \g sin(x_1 + \pi) - b \g x_2  + \delta (t)}{c} \right| + \beta_0
+  \beta (x) \geq \varrho (x) + \beta_0
 \end{equation}
 Which can be bounded by:
 \begin{equation}
