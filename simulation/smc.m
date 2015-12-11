@@ -33,7 +33,6 @@ rho2 = (Km*A*(5/2000)/(min(m_p)*l))/min(c_p)
 
 x2_bound = 0.01;
 theta = 0.94;
-scale = 1;
 
 e = (x2_bound)/norm(1-1/theta)
 

@@ -55,10 +55,10 @@ lambda_min = min(eig(P))
 lambda_max = max(eig(P))
 
 % The ultimate boundness
-b_lyap = 1/2 *sqrt(lambda_max/lambda_min)*sqrt(1/(theta_lyap))
+b_lyap = 1/2 * sqrt(lambda_max/lambda_min)*sqrt(1/(theta_lyap))
 
 xLimit = norm([0.1 0.01]);
 
 % epsilon
-e_lyap = (xLimit/b_lyap)^2
-e_lyap = 0.15
+% e_lyap = (xLimit/b_lyap)^2
+e_lyap = 0.14
