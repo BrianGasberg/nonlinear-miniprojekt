@@ -1,66 +1,23 @@
-\section{Bound} % (fold)
-\label{sec:bound}
-
+The trajectory reaches the boundary layer near the sliding surface where $|s| \leq \epsilon$ in finite time. Inside the boundary layer the system dynamics reduces to $\dot{x}_1 = -a_1 x_1 + s$. In order to insure performance of the sliding mode control the Lyapunov stability in the reaching fase is analysed by the Lyapunov candidate $V = \frac{1}{2} x_1^2$. The derivative is then given as:
 \begin{equation}
         \begin{split}
                 \dot{V}_1(x) &= x_1 \dot{x}_1 = -a_1 x_1^2 + x_1 s \leq -a_1 x_1^2 + |x_1| \epsilon \\
                 &\leq -(1-\theta)a_1 x_1^2 - \theta a_1|x_1|^2 + |x_1|\epsilon \leq 0 \quad \forall \quad |x_1| \geq \frac{\epsilon}{a_1 \theta}
         \end{split}
 \end{equation}
-The bound is then defined as:
+where $0 < \theta < 1$. This means that when the trajectory reaches the set:
 \begin{equation}
-  \Omega = \{ |x_1| \leq \frac{\epsilon}{-a_1 \g \theta} \quad , \quad |x_1 + x_2| \leq \epsilon \}
+        \Omega_\up{\epsilon} = \left\{|x_1| \leq \frac{\epsilon}{a_1 \theta}, \quad |s| \leq \epsilon \right\}
+\end{equation}
+it stays inside $\Omega_\up{\epsilon}$. 
+\begin{equation}
+        |x_2| = |a_1 x_1 + x_2 - a_1 x_1| \leq |a_1 x_1 + x_2| - |a_1 x_1| \leq \left(1 - \frac{1}{\theta}\right)\epsilon
 \end{equation}
 
+Where we have chosen $\theta = 0.94$ where the norm of the angular velocity is then given as $|x_2| \leq 0.0638 \g \epsilon \leq 0.01 \, \text{rad/s}$. We should then choose $\epsilon$ small enough to insure the performance requirement of $0.01$ rad/s.
 \begin{equation}
-  |x_2| = |x_1 + x_2 - x_1| \leq |x_1 + x_2| - |x_1| \leq (1 - \frac{1}{a_1 \g \theta}) \g \epsilon
-\end{equation}
-$\theta$ is used for testing the stability of the Lyaponov function, and should be sent as $0 \leq \theta \leq 1$. $a_1$ is found through simulation, and determines the slope of the sliding surface. The slope must be positive.
-\begin{equation}
-  \theta = 0.9 \quad a_1 = 8
-\end{equation}
-
-\begin{equation}
-  \begin{split}
-    (1-\frac{1}{a_1 \g \theta}) \g \epsilon \leq 0.01 \\
-    \epsilon < \frac{0.01 \g a_1 \g \theta}{a_1 \g \theta - 1} \\
-    \epsilon < 0.0116
-  \end{split}
-\end{equation}
-
-% It can be shown that the reaching and sliding surfaces within a given bound will guarantee convergence. The bound can be found by looking at the system and its Lyapunov function.
-
-
-
-% Define $\rho$ such that:
-% \begin{equation}
-%         \left \vert \frac{a_1 x_2 + h(x)}{g(x)} \right \vert \leq \rho(x) 
-% \end{equation}
-
-% And choose a lyapunov function candidate:
-% \begin{equation}
-%         V=(1/2)s^2
-% \end{equation}
-% for:
-% \begin{equation}
-%         s=a_1 x_1+ x_2 = 0
-% \end{equation}
-% The derived of the Lyapunov function is found by:
-% \begin{equation}
-%         \begin{split}
-%                 \dot{s} &= a_1 \g \dot{x}_1 + \dot{x}_2 \\
-%                 \dot{s} &= a_1 \g x_2 + h(x) + g(x) \g u\\
-%                 \dot{V} &= s \g \dot{s} = s(a_1 \g x_2+ h(x)) + g(x) \g s \g u \leq g(x) \g \vert s \vert \g \rho(x) + g(x) \g s\g u
-%         \end{split}
-% \end{equation}
-        
-
-% The upper bound of $\epsilon$ is found via:
-% \begin{equation}
-%         \begin{split}
-%                 \frac{(m \g l \g g_0)}{a_1} &\leq \frac{k}{\epsilon} \\
-%                 \epsilon &\leq \frac{k \g a_1}{m \g l \g g_0}    
-%         \end{split}
-% \end{equation}
+         \epsilon = 0.157 \nonumber
+ \end{equation} 
+ The results is shown in Figure \ref{fig:smc} with comments in Appendix \ref{cha:sliding_mode}.
 
 % section bound (end)
