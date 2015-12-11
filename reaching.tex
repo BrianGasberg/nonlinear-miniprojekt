@@ -1,3 +1,18 @@
+Sliding mode control is a nonlinear control design method. The sliding mode controller forces the system trajectories to
+reach a sliding surface in finite time. This sliding surface is called a sliding manifold. When the system is sliding
+along the sliding manifold the system dynamics are eliminated, and the system cannot leave the manifold. The sliding
+manifold then forces the system trajectories to reach an equillibrium, and stay there. The reference of the control
+system is then the equillibrium. 
+
+In order to control the system and be able to reach the sliding manifold the control strategy is to design the behavior
+in to different phases, where the control gain changes based on where the system state are located at any given time in
+the state space for the system. When the system state is not at the sliding surface, them it is said to be in the
+reaching phase and the control gain is then chosen to be based on a signum function, resulting in an agressive
+behavior. When the system state is within some defined distance from the sliding manifold, the it is said to be in the
+sliding phase and, the controller changes into something causing a less agressive behavior and at the same time
+eliminating the system dynamics. This ensures that the system stays on the sliding manifold leading the states through
+the state space and reach an qequillibrium of choice.
+
 The purpose of the reaching phase is to get to the manifold of the surface $s $ where:
 \begin{equation}
 s = a_1 x_1 + x_2 = 0
