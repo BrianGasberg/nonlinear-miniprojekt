@@ -8,20 +8,25 @@ A pendulum is to be controlled into a vertical orientation on a moving platform.
 \end{figure}
 The model for this system is:
 \begin{equation}
-        m\g l \g \Ddot{\theta} + m \g g \g sin(\theta) + k_f \g l \ \dot{\theta} = \frac{T}{l} + \delta_c(t)
-\end{equation}
-To simplify extrapolations later on the system model is simplified by:
-\begin{equation}
-        A=\frac{g}{l}, \qquad B=\frac{k_f}{m}, \qquad C= \frac{k_m}{m \g l^2}; \qquad \dot{x_2} = A \g sin(x_1) + B \g x_2 + C \g U + \delta_c(t)
+        m l \Ddot{\theta} + m g \sin\theta + k_\up{f}  l \ \dot{\theta} = \frac{1}{l}T + \delta_\up{c}(t)
 \end{equation}
 
-The constants of the system is not precisely known, and can therefore at best be described as:
+\begin{equation}
+        a=\frac{g}{l}, \qquad b=\frac{k_\up{f}}{m}, \qquad c= \frac{k_\up{m}}{m l^2}
+\end{equation}
+
+\begin{equation}
+        \dot{x}_2 = - a \sin x_1 - b x_2 + c u(t) + \delta_\up{c}(t)
+\end{equation}
+
+The system parameters has uncertainties and they are given in the range as follows:
 \begin{equation}
         \begin{split}
                 0.095 \leq &m \leq 0.105 \\
-                &l = 0.305 \\
                 0.4 \leq &k_f \leq 0.6 \\
-                &g = 9.81 \\
+                2/2000 \leq &\alpha \leq 5/2000 \\
+                &l = 0.305 \\
+                &g = -9.81 \\
         \end{split}
 \end{equation}
 
