@@ -1,27 +1,34 @@
-Sliding mode control is a nonlinear control design method. The sliding mode controller forces the system trajectories to
+Sliding mode control is a non-linear control design method. The sliding mode controller forces the system trajectories to
 reach a sliding surface in finite time. This sliding surface is called a sliding manifold. When the system is sliding
 along the sliding manifold the system dynamics are eliminated, and the system cannot leave the manifold. The sliding
-manifold then forces the system trajectories to reach an equillibrium, and stay there. The reference of the control
-system is then the equillibrium. 
+manifold then forces the system trajectories to reach an equilibrium, and stay there. The reference of the control
+system is then the equilibrium. 
 
-In order to control the system and be able to reach the sliding manifold the control strategy is to design the behavior
+In order to control the system and be able to reach the sliding manifold the control strategy is to design the behaviour
 in to different phases, where the control gain changes based on where the system state are located at any given time in
-the state space for the system. When the system state is not at the sliding surface, them it is said to be in the
-reaching phase and the control gain is then chosen to be based on a signum function, resulting in an agressive
-behavior. When the system state is within some defined distance from the sliding manifold, the it is said to be in the
-sliding phase and, the controller changes into something causing a less agressive behavior and at the same time
+the state space for the system. When the system state is not at the sliding surface, then it is said to be in the
+reaching phase and the control gain is then chosen to be based on a signum function, resulting in a discontinuous control. When the system state is within some defined distance from the sliding manifold, then it is said to be in the
+sliding phase and, the controller changes into a continuous controller and at the same time
 eliminating the system dynamics. This ensures that the system stays on the sliding manifold leading the states through
-the state space and reach an qequillibrium of choice.
+the state space and reach an equilibrium of choice.
 
-The purpose of the reaching phase is to get to the manifold of the surface $s $ where:
+The purpose of the reaching phase is to get to the manifold of the surface $s$ where:
 \begin{equation}
   s = a_1 x_1 + x_2 = 0
 \end{equation}
-On the manifold the control loop becomes $ \dot{x}_1 = - a_1 x_1   $ which is stable for $ a_1 > 0$
+On the manifold the control loop becomes $ \dot{x}_1 = - a_1 x_1$ which is stable for $ a_1 > 0$.
 By differentiating and using $ \dot{x}_1 = x_2 $ it becomes:
+% \begin{equation}
+%   \dot{s} = a_1 x_2 - a sin(x_1 + \pi) - b x_2 + c \left[u(t) + \delta(t) \right] + \xi (t)
+% \end{equation}
 \begin{equation}
-  \dot{s} = a_1 x_2 - a sin(x_1 + \pi) - b x_2 + c T + \delta (t)
+        \dot{s} = a_1 x_2 + \dot{x}_2 = a_1 x_2 + h(x) + g(x)u
 \end{equation}
+where $h(x)$ and $g(x)$ is the system model. For $\dot{s} = 0$ then
+\begin{equation}
+        \left\vert \frac{a_1 x_2 + h(x)}{g(x)} \right\vert \leq \varrho
+\end{equation}
+If we choose a Lyapunov candidate for $s$ to be $V = (1/2)s^2$ we check for Lyapunov s
 % For now it will be written as: 
 % \begin{equation}
 %   \dot{s} = a_1 \cdot x_2 + h(x) + g(x)\g u;
