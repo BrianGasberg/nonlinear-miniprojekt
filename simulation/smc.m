@@ -6,7 +6,7 @@ l = 0.305;
 g = -9.81;
 Km = 0.0934;
 A = 500;
-a1 = 10;
+a1 = 12;
 
 dt = 1/200;
 
@@ -24,16 +24,16 @@ b_p = [Kf_p(1)/m_p(1) Kf_p(2)/m_p(1) Kf_p(2)/m_p(2) Kf_p(1)/m_p(2)];
 
 b_hat = mean(b_p);
 
-m = max(m_p);
-Kf = mean(Kf_p);
-alpha = min(alpha_p);
+m = min(m_p);
+Kf = min(Kf_p);
+alpha = max(alpha_p);
 
 % rho1 = [abs(-a/max(c_p) - a/c_hat) abs((a1-max(b_p))/min(c_p) - (a1-b_hat)/c_hat)]
 rho1 = [abs( (1/c_hat - 1/max(c_p))*a ) abs( (a1-min(b_p))/min(c_p) + (b_hat - a1)/c_hat )]
 rho2 = (Km*A*(5/2000)/(min(m_p)*l))/min(c_p)
 
 x2_bound = 0.01;
-theta = 0.93;
+theta = 0.94;
 
 e = (x2_bound)/norm(1-1/theta)
 
