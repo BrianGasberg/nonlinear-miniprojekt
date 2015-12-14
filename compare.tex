@@ -6,5 +6,8 @@
 In Appendix \ref{cha:sliding_mode} and Appendix \ref{cha:lyapunov_redesign_results}, plots of simulation results of both
 control design via Lyapunov redesign and Sliding mode. Figure \ref{fig:lyap} is depicting the step response of the
 simulation results of a Lyapunov redesign control design technique. Figure \ref{fig:smc} is depicting the step response
-of the simulation results of a Sliding mode control design technique. Bot control designs meets the requiments for the
+of the simulation results of a Sliding mode control design technique. Both control designs meets the requirements for the
 system.
+
+It can be seen on the figures that the sliding mode controller is faster at reaching the target angle. This comes from the sliding mode being more aggressive
+than the Lyaponov redesign controller. When increasing the model uncertainty, it can be seen that the Lyaponov redesign controller still gets the pendulum quite close to the target angle, while the sliding mode controller can not handle the perturbations, although it does pass the target angle.
