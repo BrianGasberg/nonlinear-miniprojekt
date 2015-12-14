@@ -28,20 +28,21 @@ where $h(x)$ and $g(x)$ is the system model. For $\dot{s} = 0$ then the inequali
 \begin{equation}
         \left\vert \frac{a_1 x_2 + h(x)}{g(x)} \right\vert \leq \varrho(x)
 \end{equation}
-
-where $\varrho(x)$ is some function. If we choose a Lyapunov candidate for $\dot{s}$ to be $V = (1/2)s^2$ we check for Lyapunov
-
+where $\varrho(x)$ is some function. If we choose a Lyapunov candidate for $\dot{s}$ to be $V = (1/2)s^2$, the derivative is then given as:
 \begin{equation}
-  \dot{V} = s \dot{s} =  s[a_1 x_2 + h(x)] + s g(x) u(t) \leq g(x) \vert s\vert \varrho(x) + g(x) s u(t)
+  \dot{V} = s \dot{s} =  s[a_1 x_2 + h(x)] + s g(x) u \leq g(x) \vert s\vert \varrho(x) + g(x) s u \leq 0
 \end{equation}
-in order to insure Lyapunov stability at the equilibrium point we take u(t) to be
+In order to insure Lyapunov stability at the equilibrium point the inequality should hold for $\det{V} \leq 0$. We then take $u(t)$ to be
 \begin{equation}
   u(t) = -\beta(x) \up{sgn}(s)
+  \label{eq:control_ideal}
 \end{equation}
 where
 \begin{equation}
   \beta (x) \geq \varrho (x) + \beta_0
 \end{equation}
+The result of the control is that when the trajectories will reach the manifold $s=0$ in a finite time. Ones on the manifold the trajectories can not leave it again. This is seen from the inequality $\dot{V} \leq -g_0 \beta_0 \vert s \vert$. In other words, when the trajectories is on the manifold the change is energy is less than or equal to zero. This is of course only possible in the ideal sliding mode control. 
+
 % Which can be bounded by:
 % \begin{equation}
 %   \begin{split}

@@ -19,15 +19,18 @@
 %   \end{cases}
 % \nonumber
 % \end{equation}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\textwidth]{saturation}
-  \caption{Signum function (left) and the saturation function (right).}
-  \label{fig:sign_sat}
-\end{figure}
-This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we define a
-constant, $\epsilon$. The constant $\epsilon$ is used to define a region close to the sliding surface where, when
-within, the sign$()$ function is replaced with an approximation of a discontinous function - a saturation function.
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.6\textwidth]{saturation}
+%   \caption{Signum function (left) and the saturation function (right).}
+%   \label{fig:sign_sat}
+% \end{figure}
+In the ideal case the sliding mode control should begin sliding along the sliding surface when reached. In reality, the trajectories will overshoot the sliding surface because of delayes in the switching term in the control equation \ref{eq:control_ideal}. This overshoot will result in a ``zig-zag'' motion (oscillations) along the sliding surface because of the rapid sign change in the control. This Chattering downgrades the performance of the control and might even attenuate unmodelled high-frequency dynamics.
+
+We can reduce the chattering by replacing the sign function in the control \ref{eq:control_ideal} by a saturation function in a region $\epsilon$ around $s=0$. The saturation function approximates a discontinuous function and is defined as such:
+% This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we define a
+% constant, $\epsilon$. The constant $\epsilon$ is used to define a region close to the sliding surface where, when
+% within, the sgn$()$ function is replaced with an approximation of a discontinous function - a saturation function.
 \begin{equation}
   u = -\beta\left( \vect{x} \right) \up{sat}\left( \frac{s}{\epsilon} \right)
 \end{equation}
