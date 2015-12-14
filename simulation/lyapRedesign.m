@@ -22,7 +22,7 @@ b_hat = mean(b_p);
 
 m = mean(m_p);
 Kf = mean(Kf_p);
-alpha = min(alpha_p);
+alpha = mean(alpha_p);
 
 
 k0_lyap = abs((max(c_p) - c_hat)/c_hat)
