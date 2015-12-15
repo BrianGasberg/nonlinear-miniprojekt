@@ -1,22 +1,22 @@
-The trajectory reaches the boundary layer near the sliding surface where $|s| \leq \epsilon$ in finite time. Inside the boundary layer the system dynamics reduces to $\dot{x}_1 = -a_1 x_1 + s$. In order to insure performance of the sliding mode control the Lyapunov stability in the sliding phase is analysed by the Lyapunov candidate $V = (1/2) x_1^2$. The derivative is then given as:
+The trajectory reaches the boundary layer near the sliding surface where $|s| \leq \varepsilon$ in finite time. Inside the boundary layer the system dynamics reduces to $\dot{x}_1 = -a_1 x_1 + s$. In order to insure performance of the sliding mode control the Lyapunov stability in the sliding phase is analysed by the Lyapunov candidate $V = (1/2) x_1^2$. The derivative is then given as:
 \begin{equation}
         \begin{split}
-                \dot{V}_1(x) &= x_1 \dot{x}_1 = -a_1 x_1^2 + x_1 s \leq -a_1 x_1^2 + |x_1| \epsilon \\
-                &\leq -(1-\theta)a_1 x_1^2 - \theta a_1|x_1|^2 + |x_1|\epsilon \leq 0 \quad \forall \quad |x_1| \geq \frac{\epsilon}{a_1 \theta}
+                \dot{V}_1(x) &= x_1 \dot{x}_1 = -a_1 x_1^2 + x_1 s \leq -a_1 x_1^2 + |x_1| \varepsilon \\
+                &\leq -(1-\theta)a_1 x_1^2 - \theta a_1|x_1|^2 + |x_1|\varepsilon \leq 0 \quad \forall \quad |x_1| \geq \frac{\varepsilon}{a_1 \theta}
         \end{split}
 \end{equation}
 where $0 < \theta < 1$. This means that when the trajectory reaches the set:
 \begin{equation}
-        \Omega_\up{\epsilon} = \left\{|x_1| \leq \frac{\epsilon}{a_1 \theta}, \quad |s| \leq \epsilon \right\}
+        \Omega_\up{\varepsilon} = \left\{|x_1| \leq \frac{\varepsilon}{a_1 \theta}, \quad |s| \leq \varepsilon \right\}
 \end{equation}
-it stays inside $\Omega_\up{\epsilon}$. 
+it stays inside $\Omega_\up{\varepsilon}$. 
 \begin{equation}
-        |x_2| = |a_1 x_1 + x_2 - a_1 x_1| \leq |a_1 x_1 + x_2| - |a_1 x_1| \leq \left(1 - \frac{1}{\theta}\right)\epsilon
+        |x_2| = |a_1 x_1 + x_2 - a_1 x_1| \leq |a_1 x_1 + x_2| - |a_1 x_1| \leq \left(1 - \frac{1}{\theta}\right)\varepsilon
 \end{equation}
 
-Where we have chosen $\theta = 0.94$ where the norm of the angular velocity is then given as $|x_2| \leq 0.0638 \g \epsilon \leq 0.01 \, \text{rad/s}$. We should then choose $\epsilon$ small enough to insure the performance requirement of $0.01$ rad/s.
+Where we have chosen $\theta = 0.94$ where the norm of the angular velocity is then given as $|x_2| \leq 0.0638 \g \varepsilon \leq 0.01 \, \text{rad/s}$. We should then choose $\varepsilon$ small enough to insure the performance requirement of $0.01$ rad/s.
 \begin{equation}
-         \epsilon = 0.157 \nonumber
+         \varepsilon = 0.157 \nonumber
  \end{equation} 
  The results is shown in Figure \ref{fig:smc} with comments in Appendix \ref{cha:sliding_mode}.
 

@@ -45,34 +45,34 @@ from this inequality it can be seen that the switching term $v$ should be equal 
 \end{equation}
 where $\beta(x) \geq \varrho(x) + \beta_0$ and $\varrho(x)$ is then the upper bound on the perturbation which satisfies the inequality
 % This strategy can, however, give rise to a fair amount of chattering in the system. To alleviate this we define a
-% constant, $\epsilon$. The constant $\epsilon$ is used to define a region close to the sliding surface where, when
+% constant, $\varepsilon$. The constant $\varepsilon$ is used to define a region close to the sliding surface where, when
 % within, the sgn$()$ function is replaced with an approximation of a discontinous function - a saturation function.
 % We can divide the control into a continuous and a switching part
 \begin{equation}
         \left \vert \frac{\delta(t)}{c} \right\vert \leq \varrho(x)
 \end{equation}
-For the system $\varrho(x)$ is calculated to be
+For the system $\varrho(x)$ is calculated to as follows with $a_1 = 8$:
 \begin{equation}
         \begin{split}
                 \left \vert \frac{\delta(t)}{c} \right\vert &= \left \vert \frac{\hat{a}(\hat{c}-c)}{c\hat{c}} \right \vert \vert \sin (\bar{x}_1 - \delta_1) \vert + \left \vert \frac{a_1 - b}{c} + \frac{\hat{b} - a_1}{\hat{c}} \right \vert \vert x_2 \vert + \left\vert \frac{\xi(t)}{c}\right\vert \\
                 &\leq 1576 \vert \bar{x}_1-\delta_1 \vert + 615.2\vert x_2 \vert + 421.38  \leq \varrho(x)
         \end{split}
 \end{equation}
-In order to reduce the chattering further we replace the sign function in the control with a saturation function. The saturation function is an approximation of a discontinuous function which in the boundary $\vert s \vert \leq \epsilon$ function as a gain and the control becomes
+In order to reduce the chattering further we replace the sign function in the control with a saturation function. The saturation function is an approximation of a discontinuous function which in the boundary $\vert s \vert \leq \varepsilon$ function as a gain and the control becomes
 \begin{equation}
-  u = -\beta\left( x \right) \up{sat}\left( \frac{s}{\epsilon} \right)
+  u = -\beta\left( x \right) \up{sat}\left( \frac{s}{\varepsilon} \right)
 \end{equation}
 Where:
 \begin{equation}
-  \up{sat}\left( \frac{s}{\epsilon} \right) =
+  \up{sat}\left( \frac{s}{\varepsilon} \right) =
   \begin{cases}
-    \frac{s}{\epsilon} &\quad \text{if $\vert\frac{s}{\epsilon}\vert$ $\leq$ 1} \\[2mm]
-    \up{sgn}\left( \frac{s}{\epsilon} \right) &\quad \text{if $\vert \frac{s}{\epsilon}\vert$ $>$ 1}
+    \frac{s}{\varepsilon} &\quad \text{if $\vert\frac{s}{\varepsilon}\vert$ $\leq$ 1} \\[2mm]
+    \up{sgn}\left( \frac{s}{\varepsilon} \right) &\quad \text{if $\vert \frac{s}{\varepsilon}\vert$ $>$ 1}
   \end{cases}
 \end{equation}
 The control is then given as
 \begin{equation}
-        u = -\beta(x)\up{sat}\left(\frac{s}{\epsilon}\right) =  -\left[ 1576 \vert \bar{x}_1-\delta_1 \vert + 615.2\vert x_2 \vert + 422 \right]\up{sat}\left(\frac{s}{\epsilon}\right)
+        u = -\beta(x)\up{sat}\left(\frac{s}{\varepsilon}\right) =  -\left[ 1576 \vert \bar{x}_1-\delta_1 \vert + 615.2\vert x_2 \vert + 422 \right]\up{sat}\left(\frac{s}{\varepsilon}\right)
 \end{equation}
 % where
 % \begin{equation}

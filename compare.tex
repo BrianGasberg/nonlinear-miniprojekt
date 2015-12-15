@@ -1,5 +1,14 @@
 \section{Results and Conclusion} % (fold)
 \label{sec:results_and_conclusion}
+The following controller has be found through simulations
+\begin{equation}
+\begin{split}
+        \delta_1 &= \pi \\
+        \varepsilon &= 0.157\\
+        a_1 &= 15 \\
+        u &=  -\left[ 1576 \vert \bar{x}_1-\delta_1 \vert + 615.2\vert x_2 \vert + 422 \right]\up{sat}\left(\frac{s}{\epsilon}\right)\nonumber \\
+\end{split}
+\end{equation}
 
 \subsection{Sliding Mode Control vs. Lyapunov Redesign} % (fold)
 \label{sub:sliding_mode_control_vs_lyapunov_redesign}
@@ -9,5 +18,4 @@ simulation results of a Lyapunov redesign control design technique. Figure \ref{
 of the simulation results of a Sliding mode control design technique. Both control designs meets the requirements for the
 system.
 
-It can be seen on the figures that the sliding mode controller is faster at reaching the target angle. This comes from the sliding mode being more aggressive than the Lyaponov redesign controller. When increasing the model uncertainty, it can be seen that the Lyaponov redesign controller is more robust as it gets the pendulum quite close to the target angle, while the sliding mode controller can not handle the perturbations, although it does pass the target angle.
-
+It can be seen on the figures that the sliding mode controller is faster at reaching the target angle. This comes from the sliding mode being more aggressive than the Lyaponov redesign controller. If the disturbance is increased with a signifcant amount e.g. larger unmodelled uncertainty, the Lyaponov Redesign controller seems more robust, while the sliding mode controller target error is larger.
