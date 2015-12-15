@@ -121,7 +121,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -155,13 +155,14 @@
       <text
          transform="matrix(0.9553168,0.29558385,-0.29558385,0.9553168,0,0)"
          id="text10283-5"
-         y="344.11984"
-         x="396.17233"
+         y="337.55096"
+         x="404.60239"
          style="font-style:normal;font-weight:normal;font-size:7.08661413px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
+         xml:space="preserve"
+         sodipodi:linespacing="125%"><tspan
            style="font-size:3.54330707px"
-           y="344.11984"
-           x="396.17233"
+           y="337.55096"
+           x="404.60239"
            id="tspan10285-0">$l$</tspan></text>
     </g>
     <path
@@ -185,13 +186,14 @@
          id="tspan10285">$\theta$</tspan></text>
     <text
        id="text10283-8"
-       y="425.75507"
-       x="254.82144"
+       y="421.15689"
+       x="271.90048"
        style="font-style:normal;font-weight:normal;font-size:7.08661413px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
          style="font-size:3.54330707px"
-         y="425.75507"
-         x="254.82144"
+         y="421.15689"
+         x="271.90048"
          id="tspan10285-6">$m$</tspan></text>
     <text
        id="text10283-8-8"
