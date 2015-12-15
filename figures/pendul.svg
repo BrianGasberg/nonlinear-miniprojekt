@@ -5,11 +5,39 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg2"
    viewBox="0 0 150.208 86.285996"
    height="24.351826mm"
-   width="42.392036mm">
+   width="42.392036mm"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="pendul.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
+     id="namedview35"
+     showgrid="true"
+     inkscape:zoom="9.1340007"
+     inkscape:cx="69.662835"
+     inkscape:cy="39.573665"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4203" />
+  </sodipodi:namedview>
   <defs
      id="defs4">
     <marker
@@ -93,7 +121,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -141,22 +169,19 @@
        d="m 285,412.3622 0,85"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.4, 2.4;stroke-dashoffset:0;stroke-opacity:1" />
     <path
-       d="m 285.0029,492.36362 a 15.001434,15.001434 0 0 1 -14.7956,-12.51268 15.001434,15.001434 0 0 1 9.88695,-16.66509"
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker7949)"
-       id="circle7941" />
-    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker8009);marker-end:url(#marker8043)"
        d="m 250,482.3622 70,0"
        id="path8007" />
     <text
        id="text10283"
-       y="473.7908"
-       x="272.32144"
+       y="472.14859"
+       x="269.91284"
        style="font-style:normal;font-weight:normal;font-size:7.08661413px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
          style="font-size:3.54330707px"
-         y="473.7908"
-         x="272.32144"
+         y="472.14859"
+         x="269.91284"
          id="tspan10285">$\theta$</tspan></text>
     <text
        id="text10283-8"
@@ -170,17 +195,38 @@
          id="tspan10285-6">$m$</tspan></text>
     <text
        id="text10283-8-8"
-       y="466.29077"
-       x="260.35715"
+       y="457.31335"
+       x="285.42831"
        style="font-style:normal;font-weight:normal;font-size:7.08661413px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
          style="font-size:3.54330707px"
-         y="466.29077"
-         x="260.35715"
+         y="457.31335"
+         x="285.42831"
          id="tspan10285-6-6">$\pi$</tspan></text>
     <path
-       d="m 284.92755,498.37317 a 21.011086,21.011086 0 0 1 -20.93721,-20.76618 21.011086,21.011086 0 0 1 20.44772,-21.24835"
-       id="path10356"
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:0.5,1.5;stroke-dashoffset:0;marker-end:url(#marker10358)"
+       id="path4205"
+       sodipodi:type="arc"
+       sodipodi:cx="284.896"
+       sodipodi:cy="477.64819"
+       sodipodi:rx="18"
+       sodipodi:ry="18"
+       sodipodi:start="1.5751518"
+       sodipodi:end="4.6755001"
+       d="m 284.8176,495.64802 a 18,18 0 0 1 -17.91922,-17.70704 18,18 0 0 1 17.33377,-18.28054"
+       sodipodi:open="true" />
+    <path
+       sodipodi:open="true"
+       d="m 284.8176,495.64802 a 18,18 0 0 1 -17.64876,-14.87767 18,18 0 0 1 11.50387,-20.01211"
+       sodipodi:end="4.3593634"
+       sodipodi:start="1.5751518"
+       sodipodi:ry="18"
+       sodipodi:rx="18"
+       sodipodi:cy="477.64819"
+       sodipodi:cx="284.896"
+       sodipodi:type="arc"
+       id="path4207"
        style="opacity:1;fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker10358)" />
   </g>
 </svg>

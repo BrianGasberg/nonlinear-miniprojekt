@@ -50,11 +50,11 @@
   \makeatother%
   \begin{picture}(1,0.5744434)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pendul.pdf}}%
-    \put(0.3858726,0.32597833){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$l$}}}%
+    \put(0.44199519,0.36971021){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$l$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{pendul.pdf}}%
-    \put(0.41559331,0.16548649){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\theta$}}}%
-    \put(0.2990882,0.48528127){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$m$}}}%
-    \put(0.3359418,0.21541745){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\pi$}}}%
+    \put(0.39955827,0.1764194){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\theta$}}}%
+    \put(0.41279085,0.51589332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$m$}}}%
+    \put(0.50285151,0.27518402){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\pi$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{pendul.pdf}}%
   \end{picture}%
 \endgroup%
