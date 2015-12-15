@@ -31,6 +31,7 @@ where $h(x)$ and $g(x)$ is the system model. For $\dot{s} = 0$ then the inequali
 where $\varrho(x)$ is some function. If we choose a Lyapunov candidate for $\dot{s}$ to be $V = (1/2)s^2$, the derivative is then given as:
 \begin{equation}
   \dot{V} = s \dot{s} =  s[a_1 x_2 + h(x)] + s g(x) u \leq g(x) \vert s\vert \varrho(x) + g(x) s u \leq 0
+  \label{eq:lyap_dot}
 \end{equation}
 In order to insure Lyapunov stability at the equilibrium point the inequality should hold for $\det{V} \leq 0$. We then take $u(t)$ to be
 \begin{equation}
