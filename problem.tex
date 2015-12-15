@@ -21,9 +21,11 @@ To simplify the coefficients is parametrised by:
 \begin{equation}
         a=\frac{g}{l}, \qquad b=\frac{k_\up{f}}{m}, \qquad c= \frac{k_\up{m}\alpha}{m l^2}, \qquad \delta_\up{c}(t) = k_\up{m} \frac{A\g5}{2000}\sin(t)
 \end{equation}
-
 \begin{equation}
-        \dot{x}_2 = - a \sin x_1 - b x_2 + c u(t) + \xi(t)
+\begin{split}
+        \dot{x}_1 &= x_2\\
+        \dot{x}_2 &= - a \sin x_1 - b x_2 + c u(t) + \xi(t)\\
+\end{split}
 \end{equation}
 
 where
@@ -44,9 +46,9 @@ The system parameters has uncertainties and they are given in the range as follo
         \end{split}
 \end{equation}
 
-The disturbances from the moving platform is estimated to be equal:
+The disturbances from the moving platform is estimated to be:
 \begin{equation}
-        \delta_c(t) = k_\up{m} \g 5/2000 \g \sin(t)
+        \delta_c(t) = A k_\up{m} \frac{5}{2000} \sin(t)
 \end{equation}
 
 The goal is to design a sliding mode controller which can stabilize the inverted pendulum at $(\pi,0)$ with tolerances $|\theta| \leq 0.1$ and $|\dot{\theta}| \leq 0.01$. The controller shall be tested both through simulation and through testing on a real platform.
